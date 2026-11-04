@@ -1,0 +1,8 @@
+vitaldb
+pandas
+pyarrow
+numpy
+matplotlib
+requests
+tqdm
+ipykernel

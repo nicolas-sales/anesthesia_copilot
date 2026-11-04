@@ -1,0 +1,13 @@
+# Données VitalDB (Data Use Agreement + taille : ~35 Go)
+data/
+
+# Environnement
+venvcop/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets (clés API du LLM plus tard)
+.env
