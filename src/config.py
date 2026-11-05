@@ -31,3 +31,16 @@ class FeatureConfig:
         "intraop_phe", "intraop_epi", "intraop_ca",
         "icu_days", "death_inhosp", "dis",
     ])
+
+@dataclass
+class DownloadConfig:
+    cohort_path : Path = Path("data/cohort.csv")
+    output_numerics_path : Path = Path("data/numerics")
+    required_track_1Hz: list[str] = field(
+        default_factory=lambda: ["Solar8000/ART_MBP", "Solar8000/ART_SBP", "Solar8000/ART_DBP", "Solar8000/NIBP_MBP", "Solar8000/HR",
+        "Solar8000/PLETH_SPO2", "Solar8000/ETCO2", "Solar8000/BT" , "BIS/BIS" , "Primus/MAC", "Primus/PEEP_MBAR", 
+        "Primus/TV" , "Orchestra/PPF20_CE", "Orchestra/RFTN20_CE", "Orchestra/PHEN_RATE", "Orchestra/NEPI_RATE"]
+    )
+    required_track_100Hz: list[str] = field(
+        default_factory=lambda:  ["SNUADC/ART", "SNUADC/ECG_II", "SNUADC/PLETH"]
+    )

@@ -35,8 +35,8 @@ Citer : Lee HC et al., Sci Data 2022;9:279. Respecter le Data Use Agreement.
 2. `src/data/download.py` : un parquet par cas, reprise si interrompu, téléchargement parallèle (4 threads).
    - data/numerics/{caseid}.parquet à 1 Hz (~160 Ko/cas) : Solar8000/ART_MBP, ART_SBP, ART_DBP, NIBP_MBP, HR,
      PLETH_SPO2, ETCO2, BT ; BIS/BIS ; Primus/MAC, PEEP_MBAR, TV ; Orchestra/PPF20_CE, RFTN20_CE, PHEN_RATE, NEPI_RATE.
-   - option --waveforms : data/waveforms/{caseid}.parquet à 100 Hz (~10 Mo/cas, ~35 Go au total) :
-     SNUADC/ART, ECG_II, PLETH.
+   - option --waveforms : daSNUADC/ART, ECG_II, PLETHta/waveforms/{caseid}.parquet à 100 Hz (~10 Mo/cas, ~35 Go au total) :
+     .
    - `load_numerics()` : ffill(limit=4) car Solar8000 mesure toutes les ~2 s (50 % de NaN à 1 Hz sinon),
      PAM hors [20, 200] mise à NaN (artefacts rinçage/prélèvement).
 
